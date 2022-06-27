@@ -85,10 +85,13 @@
     --font-size-128: 8rem;
     --font-size-144: 9rem;
 }
-
+.App {
+    width: 100%;
+    position: relative;
+}
 .Global-nav {
     background: var(--primary-color-dark);
-    width: 100%;
+    width: inherit;
     height: var(--nav-height-l);
     padding: 0 var(--space-40);
     color: var(--primary-color-light);
@@ -118,7 +121,7 @@
 }
 .Main-header {
     background: var(--primary-color-dark);
-    width: 100%;
+    width: inherit;
     height: calc(100vh - (var(--nav-height-l)));
     padding: 0 var(--space-40);
 
@@ -136,5 +139,29 @@
         span {
             display: block;
         }
+    }
+}
+.Global-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: var(--primary-color-dark);
+    width: inherit;
+    padding: 0 var(--space-40);
+
+    display: flex;
+    justify-content: center;
+    .Legal-links {
+        width: inherit;
+        height: var(--footer-height-l);
+
+        color: var(--primary-color-light);
+        font-size: var(--font-size-12);
+        font-weight: 600;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

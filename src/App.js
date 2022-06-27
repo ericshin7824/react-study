@@ -26,22 +26,33 @@ function Nav() {
         </nav>
     );
 }
-function Header() {
-    return (
-        <header className="Main-header">
-            <h1>
-                <span>Eric Shin</span>
-                <span>Front - End</span>
-                <span>Developer</span>
-            </h1>
-        </header>
-    );
+function Header(props) {
+    // const headerTitle = [{ title: 'Eric Shin' }, { title: 'Front - End' }, { title: 'Developer' }];
+    const spans = [
+        <h1>
+            <span>Eric Shin</span>
+            <span>Front - End</span>
+            <span>Developer</span>
+        </h1>,
+    ];
+    return <header className="Main-header">{spans}</header>;
+}
+function Footer(props) {
+    const legalLinks = [
+        <ul className="Legal-links">
+            <span>Eric Hoon Shin</span>
+            <span>@ 2022 - Hn.</span>
+            <span>United States</span>
+        </ul>,
+    ];
+    return <footer className="Global-footer">{legalLinks}</footer>;
 }
 function App() {
     return (
         <div className="App">
             <Nav></Nav>
             <Header></Header>
+            <Footer></Footer>
         </div>
     );
 }
